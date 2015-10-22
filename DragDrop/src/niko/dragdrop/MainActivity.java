@@ -18,11 +18,14 @@ public class MainActivity extends Activity {
 		context = this;
 		LinearLayout llContainerMain = (LinearLayout) findViewById(R.id.llMainContainer);
 		DragDropView dragDropView = new DragDropView(context);
-		dragDropView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+		dragDropView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		ImageView ivTest = new ImageView(context);
 		ivTest.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher));
-		dragDropView.AddDraggableView(ivTest, 50, 50, 100, 100);
+		dragDropView.AddDraggableView(ivTest, 50, 50, RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 		llContainerMain.addView(dragDropView);
+		
+		
+
 	}
 
 }
