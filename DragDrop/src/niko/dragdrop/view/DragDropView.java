@@ -95,8 +95,10 @@ public class DragDropView extends FrameLayout {
 				}
 				case MotionEvent.ACTION_UP:
 				{
-					dragParam.height = 150;
-					dragParam.width = 150;
+				//	dragParam.height = 150;
+				//	dragParam.width = 150;
+					dragParam.height = v.getHeight();
+                		        dragParam.width = v.getWidth();
 					dragParam.topMargin = (int)event.getRawY() - (v.getHeight());
 					dragParam.leftMargin = (int)event.getRawX() - (v.getWidth()/2);
 					v.setLayoutParams(dragParam);
@@ -104,8 +106,10 @@ public class DragDropView extends FrameLayout {
 				}
 				case MotionEvent.ACTION_DOWN:
 				{
-					dragParam.height = 100;
-					dragParam.width = 100;
+				//	dragParam.height = 100;
+				//	dragParam.width = 100;
+				        dragParam.height = v.getHeight();
+                		        dragParam.width = v.getWidth();
 					v.setLayoutParams(dragParam);
 					break;
 				}
